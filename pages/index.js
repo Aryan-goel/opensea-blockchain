@@ -1,7 +1,8 @@
 import Head from 'next/head'
+import Header from '../Components/Header'
 
 export default function Home() {
   return (
-    <h2> yo</h2>
+    <Header/>
   )
 }
