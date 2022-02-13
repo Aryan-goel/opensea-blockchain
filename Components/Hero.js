@@ -21,17 +21,26 @@ const Hero = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.container}>
-          <div className={style.contentWrapper}>
-        <div className={style.copyContainer}>
-          <div className={style.title}>
-            Discover, collect, and sell extraordinary NFTs.
+        <div className={style.contentWrapper}>
+          <div className={style.copyContainer}>
+            <div className={style.title}>
+              Discover, collect, and sell extraordinary NFTs.
+            </div>
+            <div className={style.description}>
+              OpenSea is the worlds first and the largest NFT marketplace.
+            </div>
+            <div className={style.ctaContainer}>
+              <button className={style.accentedButton}>Explore</button>
+              <button className={style.button}>Create</button>
+            </div>
           </div>
-          <div className={style.description}>
-                  OpenSea is the worlds first and the largest marketplace.
-              </div>
-              
-              </div>
-          
+          <div className={style.cardContainer}>
+            <img
+              className="rounded-t-lg"
+              src="https://lh3.googleusercontent.com/DMECLVNnZV6cG6Rj_-gxxutAvF-hXI18TwSnkGX1uNDSpOjB52iN62ozxG1r1nTEdQUodW9GdwwIsOq2vXn8_jie-Uo-_fw1EYsO4g=s550"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
