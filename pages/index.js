@@ -2,6 +2,7 @@ import Header from '../Components/Header'
 import Hero from '../Components/Hero'
 import { useWeb3 } from '@3rdweb/hooks'
 import { useEffect } from 'react'
+import {client} from '../lib/SanityClient'
 
 const style = {
   wrapper: ``,
