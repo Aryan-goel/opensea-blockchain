@@ -1,8 +1,8 @@
 import React from 'react'
-
+//https://lh3.googleusercontent.com/ujepnqpnL0nDQIHsWxlCXzyw4pf01yjz1Jmb4kAQHumJAPrSEj0-e3ABMZlZ1HEpJoqwOcY_kgnuJGzfXbd2Tijri66GXUtfN2MXQA=s250
 const style = {
   wrapper: `relative`,
-  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://lh3.googleusercontent.com/ujepnqpnL0nDQIHsWxlCXzyw4pf01yjz1Jmb4kAQHumJAPrSEj0-e3ABMZlZ1HEpJoqwOcY_kgnuJGzfXbd2Tijri66GXUtfN2MXQA=s250')] before:bg-cover before:bg-center before:opacity-30 before:blur`,
+  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://lh3.googleusercontent.com/DMECLVNnZV6cG6Rj_-gxxutAvF-hXI18TwSnkGX1uNDSpOjB52iN62ozxG1r1nTEdQUodW9GdwwIsOq2vXn8_jie-Uo-_fw1EYsO4g=s550')] before:bg-cover before:bg-center before:opacity-30 before:blur`,
   contentWrapper: `flex h-screen relative justify-center flex-wrap items-center`,
   copyContainer: `w-1/2`,
   title: `relative text-white text-[46px] font-semibold`,
