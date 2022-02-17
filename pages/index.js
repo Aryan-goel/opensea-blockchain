@@ -1,8 +1,10 @@
 import Header from '../Components/Header'
+import Head from 'next/head'
 import Hero from '../Components/Hero'
 import { useWeb3 } from '@3rdweb/hooks'
 import { useEffect } from 'react'
 import {client} from '../lib/SanityClient'
+import toast,{Toaster} from 'react-hot-toast';
 
 const style = {
   wrapper: ``,
@@ -13,21 +15,36 @@ const style = {
 
 export default function Home() {
   const { address, connectWallet } = useWeb3()
+  const welcomeUser=(userName,toastHandler=toast)=>{
+    toastHandler.success(
+      `Welcome back${userName !== 'Unnamed' ? ` ${userName}` : ''}!`,
+      {
+        style: {
+          background: '#04111d',
+          color: '#fff',
+        },
+      }
+    )
+  }
+
   useEffect(() => {
     if (!address) return
     ;(async () => {
       const userDoc = {
-        _type: 'user',
+        _type: 'users',
         _id: address,
         userName: 'Unnamed',
         walletAddress: address,
       }
       const result = await client.createIfNotExists(userDoc)
+      welcomeUser(result.userName)
+      
     })()
   }, [address])
   
   return (
     <div className={style.wrapper}>
+      <Toaster position='top-center' reverseOrder={false}/>
       {address ? (
         <>
           <Header />
@@ -42,7 +59,7 @@ export default function Home() {
             connect wallet
           </button>
           <div className={style.details}>
-            you need chrome to border
+            you need chrome to be
             <br /> able to run this app.
           </div>
         </div>
